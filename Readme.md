@@ -1,4 +1,4 @@
-# Create a SQL Server 2014 Always On Availability Group in an existing Azure VNET and an existing Active Directory instance
+# Create a SQL Server 2016 Always On Availability Group in an existing Azure VNET and an existing Active Directory instance
 
 This template will create a SQL Server 2014 Always On Availability Group using the PowerShell DSC Extension in an existing Azure Virtual Network and Active Directory environment.
 
@@ -20,7 +20,7 @@ To deploy the required Azure VNET and Active Directory infrastructure, if not al
 + 	The default settings for compute require that you have at least 9 cores of free quota to deploy.
 
 + 	The images used to create this deployment are
-	+ 	SQL Server - Latest SQL Server 2016 on Windows Server 2012 R2 Image
+	+ 	SQL Server - Latest SQL Server 2016 on Windows Server 2016 Image
 	+ 	Witness - Latest Windows Server 2012 R2 Image
 
 + 	The image configuration is defined in variables, but the scripts that configure this deployment have only been tested with these versions and may not work on other images.
