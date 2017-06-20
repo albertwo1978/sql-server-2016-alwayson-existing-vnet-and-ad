@@ -6,7 +6,7 @@ This template creates the following resources:
 
 +	Three Storage Accounts
 +	One internal load balancer
-+	Three VMs in a Windows Server Cluster, two VMs run SQL Server 2014 with an availability group and the third is a File Share Witness for the Cluster
++	Three VMs in a Windows Server Cluster, two VMs run SQL Server 2016 with an availability group and the third is a File Share Witness for the Cluster
 +	One Availability Set for the SQL and Witness VMs
 
 A SQL Server always on listener is created using the internal load balancer.
@@ -20,7 +20,7 @@ To deploy the required Azure VNET and Active Directory infrastructure, if not al
 + 	The default settings for compute require that you have at least 9 cores of free quota to deploy.
 
 + 	The images used to create this deployment are
-	+ 	SQL Server - Latest SQL Server 2014 on Windows Server 2012 R2 Image
+	+ 	SQL Server - Latest SQL Server 2016 on Windows Server 2012 R2 Image
 	+ 	Witness - Latest Windows Server 2012 R2 Image
 
 + 	The image configuration is defined in variables, but the scripts that configure this deployment have only been tested with these versions and may not work on other images.
@@ -29,13 +29,10 @@ To deploy the required Azure VNET and Active Directory infrastructure, if not al
 
 Click the button below to deploy from the portal
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsql-server-2014-alwayson-existing-vnet-and-ad%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Falbertwo1978%2Fsql-server-2016-alwayson-existing-vnet-and-ad%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsql-server-2014-alwayson-existing-vnet-and-ad%2Fazuredeploy.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsql-server-2014-alwayson-existing-vnet-and-ad%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Falbertwo1978%2Fsql-server-2016-alwayson-existing-vnet-and-ad%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
