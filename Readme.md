@@ -29,10 +29,10 @@ To deploy the required Azure VNET and Active Directory infrastructure, if not al
 
 Click the button below to deploy from the portal
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Falbertwo1978%2Fsql-server-2016-alwayson-existing-vnet-and-ad%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/http%3A%2F%2Fpaelazsas1.blob.core.windows.net%2Farmdsc%2Fsql2016aoag%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Falbertwo1978%2Fsql-server-2016-alwayson-existing-vnet-and-ad%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=http%3A%2F%2Fpaelazsas1.blob.core.windows.net%2Farmdsc%2Fsql2016aoag%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
@@ -40,7 +40,7 @@ Click the button below to deploy from the portal
 
 You can deploy these samples directly through the Azure Portal or by using the scripts supplied in the root of the repo.
 
-To deploy a sammple using the Azure Portal, click the **Deploy to Azure** button found in the README.md of each sample.
+To deploy a sample using the Azure Portal, click the **Deploy to Azure** button found in the README.md of each sample.
 
 To deploy the sample via the command line (using [Azure PowerShell or the Azure CLI](https://azure.microsoft.com/en-us/downloads/)) you can use the scripts.
 
