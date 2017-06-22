@@ -39,21 +39,6 @@ Click the button below to deploy from the portal
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-## Deploying Sample Templates
+## Deploying
 
-You can deploy these samples directly through the Azure Portal or by using the scripts supplied in the root of the repo.
-
-To deploy a sample using the Azure Portal, click the **Deploy to Azure** button found in the README.md of each sample.
-
-To deploy the sample via the command line (using [Azure PowerShell or the Azure CLI](https://azure.microsoft.com/en-us/downloads/)) you can use the scripts.
-
-Simple execute the script and pass in the folder name of the sample you want to deploy.  For example:
-
-```PowerShell (using the deploy.ps1 script in the root of this repo)
-.\deploy.ps1 -subscriptionId '[Your Azure subscription ID]' -resourceGroupName '[The Resource Group name to deploy to]' -resourceGroupLocation '[Azure region name]'
-```
-```bash
-azure-group-deploy.sh -l eastus -u
-```
-
-Tags: ``cluster, ha, sql, alwayson``
+You can deploy these samples directly through the Azure Portal (see "Deploy to Azure" button above) or by using the deploy.ps1 script supplied in the root of the repo.
