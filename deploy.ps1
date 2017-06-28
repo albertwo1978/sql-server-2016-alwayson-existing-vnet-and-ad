@@ -61,8 +61,7 @@ $ErrorActionPreference = "Stop"
 
 # sign in
 Write-Host "Logging in...";
-# Login-AzureRmAccount;
-.\Login-RM.ps1 -SubscriptionId $subscriptionId
+.\login.ps1 -SubscriptionId $subscriptionId
 
 # select subscription
 Write-Host "Selecting subscription '$subscriptionId'";
@@ -99,3 +98,4 @@ if(Test-Path $parametersFilePath) {
 } else {
     New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFilePath;
 }
+# Test-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile $templateFilePath -TemplateParameterFile $parametersFilePath -Verbose
