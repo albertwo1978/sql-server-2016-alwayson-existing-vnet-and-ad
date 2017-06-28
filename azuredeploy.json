@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
+  "contentVersion": "1.1.0.0",
   "parameters": {
     "storageAccountType": {
       "type": "string",
@@ -54,43 +54,44 @@
       "type": "string",
       "metadata": {
         "description": "DNS domain name for existing Active Directory domain"
-      },
-      "defaultValue": ""
+      }
+    },
+    "existingDomainNetbiosName": {
+      "type": "string",
+      "maxLength": 15,
+      "metadata": {
+        "description": "NETBIOS domain name for existing Active Directory domain"
+      }
     },
     "adminUsername": {
       "type": "string",
       "metadata": {
         "description": "A domain administrator username in the existing Active Directory Domain"
-      },
-      "defaultValue": "Administrator"
+      }
     },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
         "description": "Password for the domain administrator account in the existing Active Directory Domain"
-      },
-      "defaultValue": ""
+      }
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
       "metadata": {
         "description": "The SQL Server Service domain account name"
-      },
-      "defaultValue": "SQLService"
+      }
     },
     "sqlServerServiceAccountPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The SQL Server Service domain account password"
-      },
-      "defaultValue": ""
+      }
     },
     "existingVirtualNetworkId": {
       "type": "string",
       "metadata": {
         "description": "Resource ID of the existing VNET. You can find the Resource ID for the VNET on the Properties blade of the VNET."
-      },
-      "defaultValue": ""
+      }
     },
     "existingSqlSubnetName": {
       "type": "string",
@@ -103,16 +104,14 @@
       "type": "string",
       "maxLength": 15,
       "metadata": {
-        "description": "Computer name of the existing Primary AD domain controller & DNS server"
-      },
-      "defaultValue": ""
+        "description": "VM name of the existing Primary AD domain controller & DNS server"
+      }
     },
     "sqlLBIPAddress": {
       "type": "string",
       "metadata": {
         "description": "IP address of ILB for the SQL Server AlwaysOn listener to be created. Should be an available IP address in the specified SQL subnet."
-      },
-      "defaultValue": "10.0.1.10"
+      }
     },
     "_artifactsLocation": {
       "type": "string",
@@ -153,6 +152,9 @@
           },
           "domainName": {
             "value": "[parameters('existingDomainName')]"
+          },
+          "domainNetbiosName": {
+            "value": "[parameters('existingDomainNetbiosName')]"
           },
           "dnsServerName": {
             "value": "[parameters('existingAdPDCVMName')]"
